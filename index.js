@@ -15,10 +15,11 @@ app.get('/', function(request, response) {
 
 app.get('/*', function(request, response) {
   var http = require('http');
+  var https = require('https');
   var fs = require('fs');
 
   var file = fs.createWriteStream("file.json");
-  var req = http.get(request.params[0], function(response) {
+  var req = https.get(request.params[0], function(response) {
     response.pipe(file);
   });
   var global_data = fs.readFileSync("file.json").toString();
