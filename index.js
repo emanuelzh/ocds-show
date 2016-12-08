@@ -14,7 +14,7 @@ app.get('/', function(request, response) {
 });
 
 app.get('/*', function(request, response) {
-  response.send(req.params);
+  response.send(request.params);
 });
 
 app.listen(app.get('port'), function() {
