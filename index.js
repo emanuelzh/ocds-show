@@ -21,11 +21,9 @@ app.get('/proxy/*', function(request, response) {
   var https = require('https');
 
   console.log(request.params[0].substr(0));
-  https.get(request.params[0].substr(0), (res) => {
-    res.on('data', (body) => {
+  https.get(request.params[0].substr(0), (body) => {
       response.pipe(body);
     });
-  });
 });
 
 app.listen(app.get('port'), function() {
