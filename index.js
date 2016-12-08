@@ -25,6 +25,7 @@ app.get('/proxy/*', function(request, response) {
     res.on('data', (body) => {
       response.write(body);
     });
+  response.end();
   });
 });
 
