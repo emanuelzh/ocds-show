@@ -18,7 +18,7 @@ app.get('/*', function(request, response) {
   var fs = require('fs');
 
   var file = fs.createWriteStream("file.json");
-  var req = http.get(request[0].substr(1), function(response) {
+  var req = http.get(request.params[0].substr(1), function(response) {
     response.pipe(file);
   });
   var global_data = fs.readFileSync("file.json").toString();
