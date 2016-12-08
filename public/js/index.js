@@ -26,7 +26,7 @@ FileReaderJS.setupInput(document.getElementById('upload'), {
 var loadURL = function(url) {
   console.log("loading " + url)
   $.ajax({
-    url: url,
+    url: '/proxy/' + url,
     datatype: 'json',
     success: function(result) {
       jsonInput.val(result);
