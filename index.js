@@ -19,9 +19,8 @@ app.get('/favicon.ico', function(request, response) {
 app.get('/*', function(request, response) {
   var http = require('http');
   var https = require('https');
-  var fs = require('fs');
 
-  console.log(request.params[0].substr(0))
+  console.log(request.params[0].substr(0));
   https.get(request.params[0].substr(0), (res) => {
     res.on('data', (body) => {
       console.log(body);
