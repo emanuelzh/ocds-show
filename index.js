@@ -28,6 +28,7 @@ app.get('/*', function(request, response) {
       json_download += body;
     });
   });
+  console.log(json_download);
   response.send(json_download);
 });
 
