@@ -20,9 +20,10 @@ app.get('/*', function(request, response) {
   var http = require('http');
   var https = require('https');
 
+  var json_download = "";
+
   console.log(request.params[0].substr(0));
   https.get(request.params[0].substr(0), (res) => {
-    var json_download = ""
     res.on('data', (body) => {
       json_download += body;
     });
