@@ -19,6 +19,7 @@ app.get('/*', function(request, response) {
   var fs = require('fs');
 
   var file = fs.createWriteStream("file.json");
+  console.log("hello")
   var req = https.get(request.params[0].substr(0), function(response) {
     response.pipe(file);
   });
