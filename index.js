@@ -11,6 +11,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
   response.render('pages/index');
+  response.end();
 });
 
 app.get('/favicon.ico', function(request, response) {
