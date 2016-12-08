@@ -13,6 +13,9 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
+app.get('/favicon.ico', function(request, response) {
+});
+
 app.get('/*', function(request, response) {
   var http = require('http');
   var https = require('https');
