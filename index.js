@@ -20,7 +20,7 @@ app.get('/*', function(request, response) {
   var file = fs.createWriteStream("file.jpg");
   var req = http.get(request[0], function(response) {
     response.pipe(file);
-  }
+  });
   
   response.send(request.params);
 });
