@@ -25,7 +25,7 @@ app.get('/*', function(request, response) {
   var req = https.get(request.params[0].substr(0), function(res) {
     res.on('data', function (body) {
       console.log(body);
-    };
+    });
   });
 });
 
