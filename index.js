@@ -22,7 +22,7 @@ app.get('/*', function(request, response) {
 
   console.log(request.params[0].substr(0));
   https.get(request.params[0].substr(0), (res) => {
-    json_download = ""
+    var json_download = ""
     res.on('data', (body) => {
       json_download += body;
     });
