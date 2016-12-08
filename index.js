@@ -17,12 +17,12 @@ app.get('/*', function(request, response) {
   var http = require('http');
   var fs = require('fs');
 
-  var file = fs.createWriteStream("file.jpg");
+  var file = fs.createWriteStream("file.json");
   var req = http.get(request[0], function(response) {
     response.pipe(file);
   });
-  
-  response.send(request.params);
+  var global_data = fs.readFileSync("file.json").toString();
+  response.send(file.json);
 });
 
 app.listen(app.get('port'), function() {
