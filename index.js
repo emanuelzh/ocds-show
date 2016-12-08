@@ -21,10 +21,11 @@ app.get('/*', function(request, response) {
   var https = require('https');
   var fs = require('fs');
 
-  var file = fs.createWriteStream("file.json");
   console.log(request.params[0].substr(0))
   var req = https.get(request.params[0].substr(0), function(res) {
-    console.log(res);
+    res.on('data', function (body) {
+      console.log(body);
+    };
   });
 });
 
