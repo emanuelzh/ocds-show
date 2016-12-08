@@ -20,12 +20,10 @@ app.get('/proxy/*', function(request, response) {
   var http = require('http');
   var https = require('https');
 
-  var json_download = "";
-
   console.log(request.params[0].substr(0));
   https.get(request.params[0].substr(0), (res) => {
     res.on('data', (body) => {
-      response.send(body)
+      response.send(body);
     });
   });
 });
