@@ -9,6 +9,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "ejs": "2.4.1",
+    "express": "4.13.3",
     "commander": "^2.9.0",
     "node-sass": "^3.11.1",
     "nunjucks": "^2.4.2",
