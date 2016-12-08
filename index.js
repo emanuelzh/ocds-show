@@ -27,7 +27,7 @@ app.get('/*', function(request, response) {
     response.pipe(file);
   });
   var global_data = fs.readFileSync("file.json").toString();
-  response.send(file.json);
+  response.send(global_data);
 });
 
 app.listen(app.get('port'), function() {
