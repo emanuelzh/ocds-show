@@ -28,8 +28,6 @@ app.get('/*', function(request, response) {
       response.send(body)
     });
   });
-  console.log(json_download);
-  response.send(json_download);
 });
 
 app.listen(app.get('port'), function() {
