@@ -26,6 +26,7 @@ app.get('/proxy/*', function(request, response) {
    response.send(body);
     });
   });
+  response.end();
 });
 
 app.listen(app.get('port'), function() {
