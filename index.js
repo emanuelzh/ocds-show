@@ -22,8 +22,8 @@ app.get('/*', function(request, response) {
   var fs = require('fs');
 
   console.log(request.params[0].substr(0))
-  var req = https.get(request.params[0].substr(0), function(res) {
-    res.on('data', function (body) {
+  https.get(request.params[0].substr(0), (res) => {
+    res.on('data', (body) => {
       console.log(body);
     });
   });
