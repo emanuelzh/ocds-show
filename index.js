@@ -26,6 +26,7 @@ app.get('/proxy/*', function(request, response) {
       response.write(body);
     });
   });
+
   response.end();
 });
 
