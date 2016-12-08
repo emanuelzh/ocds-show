@@ -25,8 +25,8 @@ app.get('/proxy/*', function(request, response) {
     res.on('data', (body) => {
       response.write(body);
     });
-  response.end();
   });
+  response.end();
 });
 
 app.listen(app.get('port'), function() {
