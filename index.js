@@ -37,6 +37,9 @@ app.get('/proxy/*', function(request, response) {
    res.on('data', (body) => {
      response.write(body);
     });
+   res.on('end', () => {
+     response.end();
+   };)
   });
 });
 
