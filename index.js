@@ -39,7 +39,7 @@ app.get('/proxy/*', function(request, response) {
     });
    res.on('end', () => {
      response.end();
-   };)
+   });
   });
 });
 
