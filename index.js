@@ -38,7 +38,6 @@ app.get('/proxy/*', function(request, response) {
    response.write(body);
     });
   });
-  response.end();
 });
 
 app.listen(app.get('port'), function() {
