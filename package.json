@@ -9,6 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "cors-anywhere": "0.4.0",
     "ejs": "2.4.1",
     "express": "4.13.3",
     "commander": "^2.9.0",
